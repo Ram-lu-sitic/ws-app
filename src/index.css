@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+    --color-darkmode-primary: oklch(27.59% 0.0714 300.76);
+    --color-darkmode-secondary: oklch(37.61% 0.0962 338.98);
+    --color-lightmode-primary: oklch(53.46% 0.1732 8.37);
+    --color-lightmode-secondary: oklch(70.65% 0.1855 27.71);
+    --color-complementary: oklch(80.15% 0.041 80.84);
+
+}
+
+:root {
+    background-color: var(--color-darkmode-primary);
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card {
+    transition: all 0.3s ease;
+  }
+
+.wrapper:hover .card {
+    opacity: 0.5;
+    filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.wrapper:hover .card:hover {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
